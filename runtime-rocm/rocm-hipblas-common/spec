@@ -1,0 +1,3 @@
+VER=6.4.0
+SRCS="git::commit=tags/rocm-${VER}::https://github.com/ROCm/hipBLAS-common.git"
+CHKSUMS="SKIP"
