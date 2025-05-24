@@ -5,6 +5,7 @@ PKGDEP="rocr-runtime"
 BUILDDEP="cmake"
 
 CMAKE_AFTER="
+-DCMAKE_FIND_ROOT_PATH=/usr/lib/rocm/;/usr/lib/rocm/lib/llvm/
 -DCMAKE_INSTALL_RPATH=/usr/lib/rocm/lib/llvm/lib;/usr/lib/rocm/lib
 -DCMAKE_INSTALL_PREFIX=/usr/lib/rocm
 -DCMAKE_SKIP_INSTALL_RPATH=OFF

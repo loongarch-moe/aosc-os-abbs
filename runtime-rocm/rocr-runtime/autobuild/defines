@@ -1,7 +1,7 @@
 PKGNAME=rocr-runtime
 PKGDES="User space library for launching compute kernels on ROCm-compatible Radeon cards"
 PKGSEC=devel
-PKGDEP="numactl libdrm elfutils zlib rocm-llvm rocm-rocprofiler-register zstd"
+PKGDEP="numactl libdrm elfutils zlib rocm-llvm rocm-rocprofiler-register zstd rocm-device-libs rocm-comgr rocm-hipcc"
 BUILDDEP="cmake"
 
 USECLANG=1
@@ -15,7 +15,7 @@ CMAKE_AFTER="
 -DCMAKE_CXX_COMPILER=/usr/lib/rocm/lib/llvm/bin/clang++
 -DCMAKE_INSTALL_PREFIX=/usr/lib/rocm
 -DCMAKE_PREFIX_PATH=/usr/lib/rocm
--DClang_DIR=/usr/lib/rocm/lib/llvm/lib/cmake/clang/
+-DCMAKE_FIND_ROOT_PATH=/usr/lib/rocm/;/usr/lib/rocm/lib/llvm/  
 -DBUILD_SHARED_LIBS=ON
 -DCMAKE_INSTALL_RPATH=/usr/lib/rocm/lib/llvm/lib;/usr/lib/rocm/lib
 -DCMAKE_SKIP_INSTALL_RPATH=OFF

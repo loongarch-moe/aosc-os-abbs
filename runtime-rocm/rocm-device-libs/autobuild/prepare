@@ -1,0 +1,2 @@
+abinfo "Tweaking PATH for using rocm-llvm ..."
+export PATH="/usr/lib/rocm/llvm/bin:$PATH"

@@ -10,9 +10,8 @@ CMAKE_AFTER="-DCMAKE_INSTALL_PREFIX=/usr/lib/rocm
 -DCMAKE_CXX_COMPILER=/usr/lib/rocm/lib/llvm/bin/clang++
 -DCMAKE_SKIP_INSTALL_RPATH=OFF
 -DCMAKE_PREFIX_PATH=/usr/lib/rocm
--DAMDDeviceLibs_DIR=/usr/lib/rocm/lib/llvm/lib/cmake/AMDDeviceLibs/
--Damd_comgr_DIR=/usr/lib/rocm/lib/llvm/lib/cmake/amd_comgr/
--DCMAKE_MODULE_PATH=/usr/lib/rocm/lib/cmake/hip
+-DCMAKE_FIND_ROOT_PATH=/usr/lib/rocm/;/usr/lib/rocm/lib/llvm/
+-DCMAKE_INSTALL_RPATH=/usr/lib/rocm/lib/llvm/lib;/usr/lib/rocm/lib
 "
 
 USECLANG=1
