@@ -11,12 +11,12 @@ CMAKE_AFTER="-DCMAKE_INSTALL_PREFIX=/usr/lib/rocm
 -DCMAKE_SKIP_INSTALL_RPATH=OFF
 -DCMAKE_PREFIX_PATH=/usr/lib/rocm
 -DROCM_PATH=/usr/lib/rocm
--DBUILD_CLIENTS_SAMPLES=OFF
+-DBUILD_CLIENTS_SAMPLES=ON
 -DBUILD_CLIENTS_TESTS=OFF
 -DBUILD_CLIENTS_BENCHMARKS=OFF
 -DBUILD_WITH_HIPBLASLT=ON
 -DRUN_HEADER_TESTING=OFF
--DGPU_TARGETS=gfx1030;gfx1100;gfx1101;gfx1102
+-DGPU_TARGETS=gfx1030;gfx1100;gfx1101;gfx1102;gfx1200;gfx1201
 -DCMAKE_FIND_ROOT_PATH=/usr/lib/rocm/;/usr/lib/rocm/lib/llvm/
 -DCMAKE_INSTALL_RPATH=/usr/lib/rocm/lib/llvm/lib;/usr/lib/rocm/lib
 "
@@ -25,4 +25,7 @@ USECLANG=1
 NOLTO=1
 
 # FIXME: rocm-llvm does not build on MIPS.
-FAIL_ARCH="!(amd64|arm64|loongarch64|ppc64el|riscv64)"
+FAIL_ARCH="!(loongarch64)"
+BUILD_FINAL(){
+  ninja rocblas-common
+}

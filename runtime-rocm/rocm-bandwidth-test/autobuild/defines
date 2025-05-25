@@ -18,4 +18,4 @@ CMAKE_AFTER="-DCMAKE_INSTALL_PREFIX=/usr/lib/rocm \
  -DCMAKE_INSTALL_RPATH=/usr/lib/rocm/lib/llvm/lib;/usr/lib/rocm/lib "
 
 # FIXME: rocm-llvm does not build on MIPS.
-FAIL_ARCH="!(amd64|arm64|loongarch64|ppc64el|riscv64)"
+FAIL_ARCH="!(loongarch64)"

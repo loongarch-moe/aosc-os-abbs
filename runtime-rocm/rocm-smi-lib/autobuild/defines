@@ -16,4 +16,4 @@ CMAKE_AFTER=" \
 -DCMAKE_C_COMPILER=/usr/lib/rocm/lib/llvm/bin/clang \
 -DCMAKE_CXX_COMPILER=/usr/lib/rocm/lib/llvm/bin/clang++"
 
-FAIL_ARCH="!(amd64|arm64|loongarch64|ppc64el|riscv64)"
+FAIL_ARCH="!(loongarch64)"
